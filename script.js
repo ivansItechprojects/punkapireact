@@ -5,22 +5,29 @@ document.addEventListener("DOMContentLoaded", function () {
     setTimeout(function () {
         preloaderVar.style.display = "none";
 
-        $(document).ready(function () {
+        /*$(document).ready(function () {
 
-            let modal = $('.popuptext');
-             let  close = $('.closePopup');
+            let modal = $('.popupElement');
+            
 
-             modal.click(function () {
+            modal.click(function () {
                 $(this).parent().next(modal).addClass('active');
                 $('body').addClass('hideBoddyScroll');
             });
 
-            close.click(function () {
+            /*close.click(function () {
 
                 $(this).parent().parent(modal).removeClass('active');
                 $('body').removeClass('hideBoddyScroll');
-            });
-        });
+            });*/
+      /*  });**/
+
+
+      var popup = document.querySelector('.popupElement');
+
+      popup.addEventListener('click', function(){
+        popup.classList.add('active');
+      });
 
     }, 5000);
 });
